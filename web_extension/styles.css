@@ -1,0 +1,102 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    height: 250px;
+    width: 250px;
+    border-radius: 40px;
+    background: #f0f2f5;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+.wave-text span {
+    display: inline-block;
+    font-size: 4rem;
+    animation: wave 2s ease-in-out infinite;
+}
+
+.wave-text span:nth-child(1) {
+    animation-delay: 0s;
+}
+.wave-text span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.wave-text span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+.wave-text span:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+p {
+    font-size: 17px;
+    color: hsl(0, 0%, 33%);
+    margin-bottom: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.btn-lindo {
+    position: relative;
+    padding: 15px 40px;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    margin-bottom: 15px;
+    width: 80%;
+}
+
+.btn-lindo::before {
+    content: '';
+    position: absolute;
+    left: -50%;
+    top: 0;
+    width: 200%;
+    height: 100%;
+    background: rgba(255,255,255,0.2);
+    transform: skewX(-25deg);
+    transition: all 0.5s;
+}
+
+.btn-lindo:hover::before {
+    left: 100%;
+}
+
+.btn-lindo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+#erro {
+    color: red;
+    font-weight: bold;
+    font-size: 14px;
+    min-height: 20px;
+}
+
+#status {
+    color: green;
+    font-weight: bold;
+    font-size: 14px;
+    min-height: 20px;
+    margin-top: 5px;
+}
