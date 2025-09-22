@@ -4,10 +4,10 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px 40px;
-    height: 250px;
+    height: 300px;
     width: 250px;
     border-radius: 40px;
-    background: #f0f2f5;
+    background: #73a6f3;
     font-family: 'Arial', sans-serif;
     text-align: center;
 }
@@ -16,6 +16,7 @@ body {
     display: inline-block;
     font-size: 4rem;
     animation: wave 2s ease-in-out infinite;
+    margin-top: 25px;
 }
 
 .wave-text span:nth-child(1) {
@@ -42,8 +43,8 @@ body {
 
 p {
     font-size: 17px;
-    color: hsl(0, 0%, 33%);
-    margin-bottom: 25px;
+    color: hsl(0, 0%, 0%);
+    margin-bottom: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 
 }
