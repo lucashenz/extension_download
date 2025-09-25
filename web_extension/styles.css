@@ -7,7 +7,7 @@ body {
     height: 340px;
     width: 250px;
     border-radius: 40px;
-    background: #aecfff;
+    background: #b8d0f3;
     font-family: 'Arial', sans-serif;
     text-align: center;
 }
@@ -42,11 +42,10 @@ body {
 }
 
 p {
-    font-size: 17px;
+    font-size: 18px;
     color: hsl(0, 0%, 0%);
     margin-bottom: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-
 }
 
 .btn-lindo {
@@ -64,9 +63,23 @@ p {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     margin-bottom: 15px;
     width: 80%;
+    content: 'Baixar';
 }
 
 .btn-lindo::before {
+    
+  display: flex;              /* usa flexbox */
+  align-items: center;        /* alinha verticalmente */
+  justify-content: center;    /* centraliza horizontalmente */
+  content: 'Baixar';    
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+
+
     content: '';
     position: absolute;
     left: -50%;

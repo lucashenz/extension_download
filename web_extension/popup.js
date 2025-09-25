@@ -43,6 +43,6 @@ document.getElementById("downloadBtn").addEventListener("click", async () => {
             }
         );
     } catch (err) {
-        erroDiv.textContent = "Erro inesperado: " + err.message;
+        erroDiv.textContent = " " + err.message;
     }
 });
