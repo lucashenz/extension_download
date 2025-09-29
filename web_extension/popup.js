@@ -11,7 +11,7 @@ document.getElementById("downloadBtn").addEventListener("click", async () => {
 
 
         if (tiposSelecionados.length === 0) {
-            throw new Error("Selecione pelo menos um tipo de arquivo.");
+            throw new Error("Selecione pelo menos um tipo de arquivo para download.");
         }
 
         const regex = new RegExp(`\\.(${tiposSelecionados.join("|")})$`, "i");
@@ -38,11 +38,11 @@ document.getElementById("downloadBtn").addEventListener("click", async () => {
                     let links = results[0].result;
                     links.forEach(url => chrome.downloads.download({ url }));
                 } catch (err) {
-                    erroDiv.textContent = err.message;
+                    erroDiv.textContent = " Erro " + err.message;
                 }
             }
         );
     } catch (err) {
-        erroDiv.textContent = " " + err.message;
+        erroDiv.textContent = " Erro " + err.message;
     }
 });
